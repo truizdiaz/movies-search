@@ -1,12 +1,12 @@
 <div class="movie">
     <div>
-        <p>2020</p>
+        <p>{{ movie.Year }}</p>
     </div>
     <div>
-        <img src="https://via.placeholder.com/400" alt="img">
+        <img src="{{ getImagen() }}" [alt]="movie.Title">
     </div>
     <div>
-        <span>Movie Type</span>
-        <h3>Titulo</h3>
+        <span>{{ movie.Type }}</span>
+        <h3>{{ movie.Title }}</h3>
     </div>
 </div>

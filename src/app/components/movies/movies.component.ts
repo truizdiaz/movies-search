@@ -14,7 +14,9 @@ export class MoviesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getMovies(searchTerm: string) {
+  getMovies(event: Event) {
+    const searchTerm = (event.target as HTMLInputElement).value;
+    console.log(searchTerm);
     this.movieService.getMovies(searchTerm).subscribe(movies => {
       console.log(movies);
       this.movies = movies !== undefined ? movies : [];
